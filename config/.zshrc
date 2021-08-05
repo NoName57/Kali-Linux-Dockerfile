@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/root/.oh-my-zsh"
+export ZSH="/root/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="fino"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -26,8 +26,14 @@ ZSH_THEME="fino"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -83,9 +89,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -94,3 +97,25 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias c="clear"
+alias nse="ls -la /usr/share/nmap/scripts | grep "
+alias pyshell="cat /opt/scripts/python_shell.txt | xclip"
+alias updateall='apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt autoremove -y'
+alias msfvenom-list-all='msfvenom --list all'
+alias msfvenom-list-encoders='msfvenom --list encoders'
+alias msfvenom-list-formats='msfvenom --list formats'
+alias msfvenom-list-payloads='msfvenom --list payloads'
+alias msfvenom-list-nops='msfvenom --list nops'
+alias msfvenom-list-encrypt='msfvenom --list encrypt'
+alias ports='netstat -plantu'
+alias ssh-start='systemctl restart ssh'
+alias ssh-stop='systemctl stop ssh'
+#alias tmux='tmux attach || tmux new'
+alias vmroot='cd /mnt/hgfs/'
+alias wordlists='cd /usr/share/wordlists/'
+alias wwwroot='cd /var/www/html/'
+alias pyserv='python -m SimpleHTTPServer 80'
+alias disable_aslr='echo 0 > /proc/sys/kernel/randomize_va_space'
+alias enable_aslr='echo 2 > /proc/sys/kernel/randomize_va_space'
+alias powershell='pwsh'
+alias osptl='openvpn /root/Documents/OSPTL/vpn_pack.ovpn'
